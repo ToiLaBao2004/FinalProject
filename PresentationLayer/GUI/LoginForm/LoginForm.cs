@@ -21,24 +21,51 @@ namespace PresentationLayer.GUI
 
         private void pictureBoxConMat_Click(object sender, EventArgs e)
         {
-            if (textBoxPassword.PasswordChar != '\0')
-                textBoxPassword.PasswordChar = '\0';
+            if (textBoxPassWord.PasswordChar != '\0')
+                textBoxPassWord.PasswordChar = '\0';
             else
-                textBoxPassword.PasswordChar = '*';
+                textBoxPassWord.PasswordChar = '*';
         }
 
-        private void pictureBoxLogin_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void textBoxUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                textBoxPassWord.Focus();
+            }
+        }
+
+        private void textBoxPassWord_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonLogin_Click(this, null);
+            }
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
             DangNhapFunction dangNhapFunction = new DangNhapFunction();
-            bool check = dangNhapFunction.DangNhap(textBoxUsername.Text, textBoxPassword.Text);
+            bool check = dangNhapFunction.DangNhap(textBoxUsername.Text, textBoxPassWord.Text);
+
             if (check)
             {
-                MessageBox.Show("Đăng nhập thành công");
+                MessageBox.Show("Đăng nhập thành công!");
                 this.Hide();
+                //
             }
             else
             {
-                MessageBox.Show("Đăng nhập không thành công");
+                MessageBox.Show("Đăng nhập không thành công!");
+                textBoxUsername.Clear();
+                textBoxPassWord.Clear();
+                textBoxUsername.Focus();
             }
         }
     }
