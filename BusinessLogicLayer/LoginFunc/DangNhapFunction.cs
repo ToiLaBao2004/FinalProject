@@ -11,9 +11,9 @@ namespace BusinessLogicLayer.LoginFunc
     {
         public bool DangNhap(string maDangNhap, string passWord)
         {
-            using (var dataContex = new DataContext())
+            using (var dataContext = new DataContext())
             {
-                var query = from employee in dataContex.Employees
+                var query = from employee in dataContext.Employees
                             where employee.Employee_ID == maDangNhap
                             select employee;
 
@@ -25,6 +25,40 @@ namespace BusinessLogicLayer.LoginFunc
                 }
 
                 return false;
+            }
+        }
+
+        public string LayName(string maDangNhap)
+        {
+            using (var dataContext = new DataContext())
+            {
+                var employee = dataContext.Employees.SingleOrDefault(emp => emp.Employee_ID == maDangNhap);
+
+                if (employee != null)
+                {
+                    return employee.NameEmployee;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
+        public string LayChucVu(string maDangNhap)
+        {
+            using (var dataContext = new DataContext())
+            {
+                var employee = dataContext.Employees.SingleOrDefault(emp => emp.Employee_ID == maDangNhap);
+
+                if (employee != null)
+                {
+                    return employee.RoleEmployee;
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
     }

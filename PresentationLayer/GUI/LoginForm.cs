@@ -1,19 +1,13 @@
 ﻿using BusinessLogicLayer.LoginFunc;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PresentationLayer.GUI
 {
     public partial class LoginForm : Form
     {
+        public string name = null;
+        public string chucVu = null;
         public LoginForm()
         {
             InitializeComponent();
@@ -56,9 +50,12 @@ namespace PresentationLayer.GUI
 
             if (check)
             {
+                name = dangNhapFunction.LayName(textBoxUsername.Text);
+                chucVu = dangNhapFunction.LayChucVu(textBoxUsername.Text);
                 MessageBox.Show("Đăng nhập thành công!");
                 this.Hide();
-                //
+                MainForm mainForm = new MainForm(name, chucVu);
+                mainForm.ShowDialog();
             }
             else
             {

@@ -39,7 +39,7 @@
             this.pictureBoxConMat = new System.Windows.Forms.PictureBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxPassWord = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelExit = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -147,17 +147,17 @@
             this.textBoxPassWord.TabIndex = 19;
             this.textBoxPassWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPassWord_KeyDown);
             // 
-            // label2
+            // labelExit
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
-            this.label2.Location = new System.Drawing.Point(123, 407);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 23);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "exit";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.labelExit.AutoSize = true;
+            this.labelExit.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.labelExit.Location = new System.Drawing.Point(123, 407);
+            this.labelExit.Name = "labelExit";
+            this.labelExit.Size = new System.Drawing.Size(45, 23);
+            this.labelExit.TabIndex = 21;
+            this.labelExit.Text = "exit";
+            this.labelExit.Click += new System.EventHandler(this.label2_Click);
             // 
             // buttonLogin
             // 
@@ -180,7 +180,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(290, 439);
             this.Controls.Add(this.buttonLogin);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelExit);
             this.Controls.Add(this.pictureBoxConMat);
             this.Controls.Add(this.textBoxPassWord);
             this.Controls.Add(this.textBoxUsername);
@@ -216,7 +216,7 @@
         private System.Windows.Forms.PictureBox pictureBoxConMat;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxPassWord;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelExit;
         private System.Windows.Forms.Button buttonLogin;
     }
 }
