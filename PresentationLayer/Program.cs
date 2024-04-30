@@ -1,6 +1,8 @@
 ﻿using DataAccessLayer.Context;
 using DataAccessLayer.Models;
+using PresentationLayer.DetailForm;
 using PresentationLayer.GUI;
+using PresentationLayer.UserControl;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
@@ -20,7 +22,7 @@ namespace PresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm("null", "null"));
+            Application.Run(new MainForm("",""));
         }
     }
 }

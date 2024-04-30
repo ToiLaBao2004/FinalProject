@@ -217,6 +217,12 @@
             };
             context.Products.AddOrUpdate(p => p.Product_ID, products);
 
+            var admin = new Employee { Employee_ID = "Admin", NameEmployee = "Bảo đẹp trai", 
+                Birthday = new DateTime(2004, 02, 17), Gender = "Nam", AddressEmployee = "Lâm Đồng", 
+                PhoneNumber = "0363609039", RoleEmployee = "Người tạo ra phần mềm này", Active = "1",
+                PassWordAccount = "baodeptrai" };
+            context.Employees.AddOrUpdate(admin);
+
             context.SaveChanges();
         }
     }

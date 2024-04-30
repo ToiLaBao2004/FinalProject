@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Context;
+using DataAccessLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace BusinessLogicLayer.LoadDataFunc
 {
     public class DataSanPham
     {
-        public List<dynamic> loadSanPham()
+        public List<dynamic> LoadSanPham()
         {
             using (var dataContext = new DataContext())
             {
@@ -23,6 +24,16 @@ namespace BusinessLogicLayer.LoadDataFunc
                                };
 
                 return products.ToList<dynamic>();
+            }
+        }
+
+        public Product LaySanPhamTuMaSanPham(string Product_ID)
+        {
+            using (var dataContext = new DataContext())
+            {
+                var product = dataContext.Products.FirstOrDefault(p => p.Product_ID == Product_ID);
+
+                return product;
             }
         }
     }

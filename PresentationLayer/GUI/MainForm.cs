@@ -58,5 +58,11 @@ namespace PresentationLayer.GUI
             turnOfAllForm();
             formSanPham.Show();
         }
+
+        private void pictureBox3_Click(object sender, System.EventArgs e)
+        {
+            turnOfAllForm();
+            formSanPham.Show();
+        }
     }
 }

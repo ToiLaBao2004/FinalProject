@@ -54,7 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoadDataFunc\DataHinhAnhSP.cs" />
+    <Compile Include="LoadDataFunc\DataPhanLoaiSP.cs" />
     <Compile Include="LoadDataFunc\DataSanPham.cs" />
+    <Compile Include="LoadDataFunc\DataThuongHieu.cs" />
     <Compile Include="LoginFunc\DangNhapFunction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -136,9 +136,10 @@
             this.buttonSanPham.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonSanPham.Location = new System.Drawing.Point(56, 293);
             this.buttonSanPham.Name = "buttonSanPham";
-            this.buttonSanPham.Size = new System.Drawing.Size(150, 47);
+            this.buttonSanPham.Size = new System.Drawing.Size(278, 47);
             this.buttonSanPham.TabIndex = 6;
             this.buttonSanPham.Text = "Sản phẩm";
+            this.buttonSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonSanPham.UseVisualStyleBackColor = false;
             this.buttonSanPham.Click += new System.EventHandler(this.buttonSanPham_Click);
             // 
@@ -151,9 +152,10 @@
             this.buttonHoaDon.ForeColor = System.Drawing.Color.White;
             this.buttonHoaDon.Location = new System.Drawing.Point(56, 346);
             this.buttonHoaDon.Name = "buttonHoaDon";
-            this.buttonHoaDon.Size = new System.Drawing.Size(253, 47);
+            this.buttonHoaDon.Size = new System.Drawing.Size(278, 47);
             this.buttonHoaDon.TabIndex = 7;
             this.buttonHoaDon.Text = "Hóa đơn bán hàng";
+            this.buttonHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonHoaDon.UseVisualStyleBackColor = false;
             // 
             // buttonKhachHang
@@ -165,9 +167,10 @@
             this.buttonKhachHang.ForeColor = System.Drawing.Color.White;
             this.buttonKhachHang.Location = new System.Drawing.Point(56, 399);
             this.buttonKhachHang.Name = "buttonKhachHang";
-            this.buttonKhachHang.Size = new System.Drawing.Size(171, 47);
+            this.buttonKhachHang.Size = new System.Drawing.Size(278, 47);
             this.buttonKhachHang.TabIndex = 8;
             this.buttonKhachHang.Text = "Khách hàng";
+            this.buttonKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonKhachHang.UseVisualStyleBackColor = false;
             // 
             // buttonNhanVien
@@ -179,9 +182,10 @@
             this.buttonNhanVien.ForeColor = System.Drawing.Color.White;
             this.buttonNhanVien.Location = new System.Drawing.Point(56, 505);
             this.buttonNhanVien.Name = "buttonNhanVien";
-            this.buttonNhanVien.Size = new System.Drawing.Size(158, 47);
+            this.buttonNhanVien.Size = new System.Drawing.Size(278, 47);
             this.buttonNhanVien.TabIndex = 9;
             this.buttonNhanVien.Text = "Nhân viên";
+            this.buttonNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonNhanVien.UseVisualStyleBackColor = false;
             // 
             // buttonHoaDonNhap
@@ -196,6 +200,7 @@
             this.buttonHoaDonNhap.Size = new System.Drawing.Size(278, 47);
             this.buttonHoaDonNhap.TabIndex = 10;
             this.buttonHoaDonNhap.Text = "Hóa đơn nhập hàng";
+            this.buttonHoaDonNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonHoaDonNhap.UseVisualStyleBackColor = false;
             // 
             // buttonNhaCungCap
@@ -207,9 +212,10 @@
             this.buttonNhaCungCap.ForeColor = System.Drawing.Color.White;
             this.buttonNhaCungCap.Location = new System.Drawing.Point(56, 558);
             this.buttonNhaCungCap.Name = "buttonNhaCungCap";
-            this.buttonNhaCungCap.Size = new System.Drawing.Size(198, 47);
+            this.buttonNhaCungCap.Size = new System.Drawing.Size(278, 47);
             this.buttonNhaCungCap.TabIndex = 11;
             this.buttonNhaCungCap.Text = "Nhà cung cấp";
+            this.buttonNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonNhaCungCap.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
@@ -222,6 +228,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
