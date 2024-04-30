@@ -173,6 +173,7 @@
             this.buttonSave.TabIndex = 116;
             this.buttonSave.Text = "Lưu";
             this.buttonSave.UseVisualStyleBackColor = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // ProductDetailForm
             // 

@@ -37,5 +37,18 @@ namespace BusinessLogicLayer.LoadDataFunc
                 return category;
             }
         }
+
+        public List<dynamic> LoadSanPhamTheoLoai(string maLoaiSP)
+        {
+            using (var dataContext = new DataContext())
+            {
+                var products = from p in dataContext.Products
+                               join c in dataContext.Categories on p.Category_ID equals c.Category_ID
+                               where p.Category_ID == maLoaiSP
+                               select new { p.Product_ID, p.ProductName, p.UnitPrice, p.Quantity };
+
+                return products.ToList<dynamic>();
+            }
+        }
     }
 }

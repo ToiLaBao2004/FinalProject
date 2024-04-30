@@ -92,7 +92,9 @@
                 "AobongdaNikekhonglogoDen.jpg",
                 "AobongdaNikekhonglogoTrang.jpg",
                 "NikeGalaxyCR7.jpg",
-                "YonexEclipsionZ3WomanWhite.jpg"
+                "YonexEclipsionZ3WomanWhite.jpg",
+                "QuanCauLongYonexTrang.jpg",
+                "QuanCauLongYonexDen.jpg"
             };
             foreach (var picture in pictureNames)
             {
@@ -213,7 +215,15 @@
                 new Product { Product_ID = "YEZ3WHITE39", ProductName = "Yonex Eclipsion Z3 Woman White Size 39", UnitPrice = 2600000, Quantity = 0, Brand_ID = "YNX", Category_ID = "GCL", Picture_ID = 33 },
                 new Product { Product_ID = "YEZ3WHITE40", ProductName = "Yonex Eclipsion Z3 Woman White Size 40", UnitPrice = 2600000, Quantity = 0, Brand_ID = "YNX", Category_ID = "GCL", Picture_ID = 33 },
                 new Product { Product_ID = "YEZ3WHITE41", ProductName = "Yonex Eclipsion Z3 Woman White Size 41", UnitPrice = 2600000, Quantity = 0, Brand_ID = "YNX", Category_ID = "GCL", Picture_ID = 33 },
-                new Product { Product_ID = "YEZ3WHITE42", ProductName = "Yonex Eclipsion Z3 Woman White Size 42", UnitPrice = 2600000, Quantity = 0, Brand_ID = "YNX", Category_ID = "GCL", Picture_ID = 33 }
+                new Product { Product_ID = "YEZ3WHITE42", ProductName = "Yonex Eclipsion Z3 Woman White Size 42", UnitPrice = 2600000, Quantity = 0, Brand_ID = "YNX", Category_ID = "GCL", Picture_ID = 33 },
+                new Product { Product_ID = "QCLYN955DS", ProductName = "Quần Cầu Lông Yonex 955 Trắng Size S", UnitPrice = 130000, Quantity = 0, Brand_ID = "YNX", Category_ID = "QCL", Picture_ID = 34 },
+                new Product { Product_ID = "QCLYN955DM", ProductName = "Quần Cầu Lông Yonex 955 Trắng Size M", UnitPrice = 130000, Quantity = 0, Brand_ID = "YNX", Category_ID = "QCL", Picture_ID = 34 },
+                new Product { Product_ID = "QCLYN955DL", ProductName = "Quần Cầu Lông Yonex 955 Trắng Size L", UnitPrice = 130000, Quantity = 0, Brand_ID = "YNX", Category_ID = "QCL", Picture_ID = 34 },
+                new Product { Product_ID = "QCLYN955DXL", ProductName = "Quần Cầu Lông Yonex 955 Trắng Size XL", UnitPrice = 130000, Quantity = 0, Brand_ID = "YNX", Category_ID = "QCL", Picture_ID = 34 },
+                new Product { Product_ID = "QCLYN955TS", ProductName = "Quần Cầu Lông Yonex 955 Đen Size S", UnitPrice = 130000, Quantity = 0, Brand_ID = "YNX", Category_ID = "QCL", Picture_ID = 35 },
+                new Product { Product_ID = "QCLYN955TM", ProductName = "Quần Cầu Lông Yonex 955 Đen Size M", UnitPrice = 130000, Quantity = 0, Brand_ID = "YNX", Category_ID = "QCL", Picture_ID = 35 },
+                new Product { Product_ID = "QCLYN955TL", ProductName = "Quần Cầu Lông Yonex 955 Đen Size L", UnitPrice = 130000, Quantity = 0, Brand_ID = "YNX", Category_ID = "QCL", Picture_ID = 35 },
+                new Product { Product_ID = "QCLYN955TXL", ProductName = "Quần Cầu Lông Yonex 955 Đen Size XL", UnitPrice = 130000, Quantity = 0, Brand_ID = "YNX", Category_ID = "QCL", Picture_ID = 35 }
             };
             context.Products.AddOrUpdate(p => p.Product_ID, products);
 

@@ -37,5 +37,18 @@ namespace BusinessLogicLayer.LoadDataFunc
                 return brand;
             }
         }
+
+        public List<dynamic> TimSanPhamLoadVaoDGV(string keyword)
+        {
+            using (var dataContext = new DataContext())
+            {
+                var products = from p in dataContext.Products
+                               join b in dataContext.Brands on p.Brand_ID equals b.Brand_ID
+                               where b.BrandName.Contains(keyword)
+                               select new { p.Product_ID, p.ProductName, p.UnitPrice, p.Quantity };
+
+                return products.ToList<dynamic>();
+            }
+        }
     }
 }

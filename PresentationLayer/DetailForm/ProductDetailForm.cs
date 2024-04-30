@@ -27,18 +27,32 @@ namespace PresentationLayer.DetailForm
             {
                 this.Text = "Chi tiết sản phẩm";
                 textBoxMaSanPham.ReadOnly = true;
-                textBoxTenSanPham.ReadOnly = false;
-                textBoxGiaBan.ReadOnly = false;
+                textBoxTenSanPham.ReadOnly = true;
+                textBoxGiaBan.ReadOnly = true;
                 buttonHinhAnh.Visible = true;
-                buttonSave.Visible = true;
+                buttonHinhAnh.Enabled = false;
+                buttonSave.Visible = false;
             }
             else if (Check == 2)
             {
-                this.Text = "Thêm sản phẩm";
-                textBoxMaSanPham.ReadOnly = false;
+                this.Text = "Sửa sản phẩm";
+                textBoxMaSanPham.ReadOnly = true;
                 textBoxTenSanPham.ReadOnly = false;
                 textBoxGiaBan.ReadOnly = false;
-                buttonSave.Visible = true;
+                buttonSave.Enabled = true;
+                textBoxGiaBan.ReadOnly = false;
+                buttonHinhAnh.Visible = true;
+                buttonHinhAnh.Enabled = false;
+            } 
+            else if (Check == 3)
+            {
+                this.Text = "Thêm sản phẩm";
+                textBoxMaSanPham.ReadOnly = false;
+                textBoxMaSanPham.Text = string.Empty;
+                textBoxTenSanPham.ReadOnly = false;
+                textBoxTenSanPham.Text = string.Empty;
+                textBoxGiaBan.ReadOnly = false;
+                buttonSave.Enabled = true;
                 textBoxGiaBan.ReadOnly = false;
                 buttonHinhAnh.Visible = true;
             }
@@ -69,6 +83,21 @@ namespace PresentationLayer.DetailForm
                 MessageBox.Show("Lỗi: " + ex.Message);
                 return null;
             }
+        }
+
+        void FormAddProduct()
+        {
+            // Tải danh sách thương hiệu và chọn thương hiệu tương ứng của sản phẩm
+            DataThuongHieu dataThuongHieu = new DataThuongHieu();
+            comboBoxThuongHieu.DisplayMember = "BrandName";
+            comboBoxThuongHieu.ValueMember = "Brand_ID";
+            comboBoxThuongHieu.DataSource = dataThuongHieu.LoadThuongHieu();
+
+            // Tải danh sách loại sản phẩm và chọn loại sản phẩm tương ứng của sản phẩm
+            DataPhanLoaiSP dataPhanLoaiSP = new DataPhanLoaiSP();
+            comboBoxLoaiSanPham.DisplayMember = "CategoryName";
+            comboBoxLoaiSanPham.ValueMember = "Category_ID";
+            comboBoxLoaiSanPham.DataSource = dataPhanLoaiSP.LoadLoaiSanPham();
         }
 
         void LoadData()
@@ -122,19 +151,16 @@ namespace PresentationLayer.DetailForm
                             {
                                 pictureBoxSanPham.Image = null;
                                 MessageBox.Show("Không tìm thấy hình ảnh cho sản phẩm này.");
-                                this.Close();
                             }
                         }
                         else
                         {
                             MessageBox.Show("Không tìm thấy thông tin loại sản phẩm cho sản phẩm này.");
-                            this.Close();
                         }
                     }
                     else
                     {
                         MessageBox.Show("Không tìm thấy thông tin thương hiệu cho sản phẩm này.");
-                        this.Close();
                     }
                 }
                 else
@@ -153,7 +179,54 @@ namespace PresentationLayer.DetailForm
 
         private void ProductDetailForm_Load(object sender, EventArgs e)
         {
-            LoadData();
+            if (Check == 1 || Check == 2)
+            {
+                LoadData();
+            }
+            else
+            {
+                FormAddProduct();
+            }
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataSanPham dataSanPham = new DataSanPham();
+                string ProductID = textBoxMaSanPham.Text;
+                string ProductName = textBoxTenSanPham.Text;
+                int UnitPrice = int.Parse(textBoxGiaBan.Text);
+                string BrandID = comboBoxThuongHieu.SelectedValue.ToString(); // Sử dụng SelectedValue thay vì ValueMember
+                string CategoryID = comboBoxLoaiSanPham.SelectedValue.ToString(); // Sử dụng SelectedValue thay vì ValueMember
+
+                if (Check == 2)
+                {
+                    // Cập nhật sản phẩm
+                    if (MessageBox.Show("Bạn có chắc chắn muốn cập nhật sản phẩm này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        dataSanPham.AddOrUpdateSanPham(ProductID, ProductName, UnitPrice, BrandID, CategoryID);
+                        MessageBox.Show("Đã cập nhật sản phẩm thành công");
+                    }
+                }
+                else if (Check == 3)
+                {
+                    // Thêm mới sản phẩm
+                    if (MessageBox.Show("Bạn có chắc chắn muốn thêm sản phẩm này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        dataSanPham.AddOrUpdateSanPham(ProductID, ProductName, UnitPrice, BrandID, CategoryID);
+                        MessageBox.Show("Đã thêm sản phẩm thành công");
+                    }
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Giá bán không hợp lệ. Vui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi khi lưu thông tin sản phẩm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewSanPham = new System.Windows.Forms.DataGridView();
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,19 +84,20 @@
             // dataGridViewSanPham
             // 
             this.dataGridViewSanPham.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.dataGridViewSanPham.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.dataGridViewSanPham.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewSanPham.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewSanPham.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewSanPham.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewSanPham.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSanPham.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewSanPham.ColumnHeadersHeight = 31;
             this.dataGridViewSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSP,
@@ -121,7 +122,6 @@
             this.MaSP.MinimumWidth = 6;
             this.MaSP.Name = "MaSP";
             this.MaSP.ReadOnly = true;
-            this.MaSP.Width = 250;
             // 
             // TenSanPham
             // 
@@ -130,7 +130,6 @@
             this.TenSanPham.MinimumWidth = 6;
             this.TenSanPham.Name = "TenSanPham";
             this.TenSanPham.ReadOnly = true;
-            this.TenSanPham.Width = 310;
             // 
             // GiaBan
             // 
@@ -139,7 +138,6 @@
             this.GiaBan.MinimumWidth = 6;
             this.GiaBan.Name = "GiaBan";
             this.GiaBan.ReadOnly = true;
-            this.GiaBan.Width = 200;
             // 
             // SoLuong
             // 
@@ -148,7 +146,6 @@
             this.SoLuong.MinimumWidth = 6;
             this.SoLuong.Name = "SoLuong";
             this.SoLuong.ReadOnly = true;
-            this.SoLuong.Width = 150;
             // 
             // buttonRead
             // 
@@ -172,6 +169,7 @@
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.Text = "Thêm";
             this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonDelete
             // 
@@ -183,6 +181,7 @@
             this.buttonDelete.TabIndex = 5;
             this.buttonDelete.Text = "Xóa";
             this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonUpdate
             // 
@@ -194,6 +193,7 @@
             this.buttonUpdate.TabIndex = 7;
             this.buttonUpdate.Text = "Sửa";
             this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // label2
             // 
@@ -215,6 +215,7 @@
             this.buttonAoCauLong.TabIndex = 103;
             this.buttonAoCauLong.Text = "Áo cầu lông";
             this.buttonAoCauLong.UseVisualStyleBackColor = false;
+            this.buttonAoCauLong.Click += new System.EventHandler(this.buttonAoCauLong_Click);
             // 
             // textBoxThuongHieu
             // 
@@ -225,6 +226,7 @@
             this.textBoxThuongHieu.Name = "textBoxThuongHieu";
             this.textBoxThuongHieu.Size = new System.Drawing.Size(350, 43);
             this.textBoxThuongHieu.TabIndex = 104;
+            this.textBoxThuongHieu.TextChanged += new System.EventHandler(this.textBoxThuongHieu_TextChanged);
             // 
             // label1
             // 
@@ -255,6 +257,7 @@
             this.textBoxSanPham.Name = "textBoxSanPham";
             this.textBoxSanPham.Size = new System.Drawing.Size(399, 43);
             this.textBoxSanPham.TabIndex = 106;
+            this.textBoxSanPham.TextChanged += new System.EventHandler(this.textBoxSanPham_TextChanged);
             // 
             // buttonLoad
             // 
@@ -278,6 +281,7 @@
             this.buttonQuanCauLong.TabIndex = 112;
             this.buttonQuanCauLong.Text = "Quần cầu lông";
             this.buttonQuanCauLong.UseVisualStyleBackColor = false;
+            this.buttonQuanCauLong.Click += new System.EventHandler(this.buttonQuanCauLong_Click);
             // 
             // buttonVotCauLong
             // 
@@ -289,6 +293,7 @@
             this.buttonVotCauLong.TabIndex = 114;
             this.buttonVotCauLong.Text = "Vợt cầu lông";
             this.buttonVotCauLong.UseVisualStyleBackColor = false;
+            this.buttonVotCauLong.Click += new System.EventHandler(this.buttonVotCauLong_Click);
             // 
             // buttonGiayCauLong
             // 
@@ -300,6 +305,7 @@
             this.buttonGiayCauLong.TabIndex = 116;
             this.buttonGiayCauLong.Text = "Giày cầu lông";
             this.buttonGiayCauLong.UseVisualStyleBackColor = false;
+            this.buttonGiayCauLong.Click += new System.EventHandler(this.buttonGiayCauLong_Click);
             // 
             // buttonBoDoBongDa
             // 
@@ -311,6 +317,7 @@
             this.buttonBoDoBongDa.TabIndex = 118;
             this.buttonBoDoBongDa.Text = "Bộ đồ bóng đá";
             this.buttonBoDoBongDa.UseVisualStyleBackColor = false;
+            this.buttonBoDoBongDa.Click += new System.EventHandler(this.buttonBoDoBongDa_Click);
             // 
             // buttonGiayDaBong
             // 
@@ -322,6 +329,7 @@
             this.buttonGiayDaBong.TabIndex = 120;
             this.buttonGiayDaBong.Text = "Giày bóng đá";
             this.buttonGiayDaBong.UseVisualStyleBackColor = false;
+            this.buttonGiayDaBong.Click += new System.EventHandler(this.buttonGiayDaBong_Click);
             // 
             // buttonPhuKien
             // 
@@ -333,6 +341,7 @@
             this.buttonPhuKien.TabIndex = 122;
             this.buttonPhuKien.Text = "Phụ kiện";
             this.buttonPhuKien.UseVisualStyleBackColor = false;
+            this.buttonPhuKien.Click += new System.EventHandler(this.buttonPhuKien_Click);
             // 
             // pictureBox13
             // 
@@ -344,6 +353,7 @@
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 123;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // pictureBox12
             // 
@@ -355,6 +365,7 @@
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 121;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // pictureBox11
             // 
@@ -366,6 +377,7 @@
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 119;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // pictureBox10
             // 
@@ -377,6 +389,7 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 117;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // pictureBox9
             // 
@@ -388,6 +401,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 115;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox8
             // 
@@ -399,6 +413,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 113;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox7
             // 
@@ -410,6 +425,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 111;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBox6
             // 
@@ -443,6 +459,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 8;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -454,6 +471,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -465,6 +483,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
