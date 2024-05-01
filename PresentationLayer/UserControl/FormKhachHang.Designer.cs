@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxTongTienDaMua = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,6 +49,13 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.dataGridViewKhachHang = new System.Windows.Forms.DataGridView();
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiscountCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -57,13 +64,6 @@
             this.buttonRead = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxTimSoDienThoai = new System.Windows.Forms.TextBox();
-            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiscountCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxTenKhachHang = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -179,6 +179,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 168;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // buttonLoad
             // 
@@ -190,6 +191,7 @@
             this.buttonLoad.TabIndex = 167;
             this.buttonLoad.Text = "Reload";
             this.buttonLoad.UseVisualStyleBackColor = false;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
             // 
             // pictureBox5
             // 
@@ -231,6 +233,7 @@
             this.textBoxTimMaKhachHang.Name = "textBoxTimMaKhachHang";
             this.textBoxTimMaKhachHang.Size = new System.Drawing.Size(350, 43);
             this.textBoxTimMaKhachHang.TabIndex = 162;
+            this.textBoxTimMaKhachHang.TextChanged += new System.EventHandler(this.textBoxTimMaKhachHang_TextChanged);
             // 
             // label2
             // 
@@ -267,20 +270,20 @@
             // dataGridViewKhachHang
             // 
             this.dataGridViewKhachHang.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.dataGridViewKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.dataGridViewKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewKhachHang.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewKhachHang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewKhachHang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewKhachHang.ColumnHeadersHeight = 31;
             this.dataGridViewKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSP,
@@ -299,6 +302,63 @@
             this.dataGridViewKhachHang.RowTemplate.Height = 24;
             this.dataGridViewKhachHang.Size = new System.Drawing.Size(936, 385);
             this.dataGridViewKhachHang.TabIndex = 154;
+            this.dataGridViewKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKhachHang_CellClick);
+            // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "Customers_ID";
+            this.MaSP.HeaderText = "Mã khách hàng";
+            this.MaSP.MinimumWidth = 6;
+            this.MaSP.Name = "MaSP";
+            this.MaSP.ReadOnly = true;
+            // 
+            // TenSanPham
+            // 
+            this.TenSanPham.DataPropertyName = "PhoneNumber";
+            this.TenSanPham.HeaderText = "Số điện thoại";
+            this.TenSanPham.MinimumWidth = 6;
+            this.TenSanPham.Name = "TenSanPham";
+            this.TenSanPham.ReadOnly = true;
+            // 
+            // GiaBan
+            // 
+            this.GiaBan.DataPropertyName = "NameCustomer";
+            this.GiaBan.HeaderText = "Tên khách hàng";
+            this.GiaBan.MinimumWidth = 6;
+            this.GiaBan.Name = "GiaBan";
+            this.GiaBan.ReadOnly = true;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "Birthday";
+            this.SoLuong.HeaderText = "Ngày sinh";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            // 
+            // TotalMoney
+            // 
+            this.TotalMoney.DataPropertyName = "Gender";
+            this.TotalMoney.HeaderText = "Giới tính";
+            this.TotalMoney.MinimumWidth = 6;
+            this.TotalMoney.Name = "TotalMoney";
+            this.TotalMoney.ReadOnly = true;
+            // 
+            // DiscountCode
+            // 
+            this.DiscountCode.DataPropertyName = "AddressCustomer";
+            this.DiscountCode.HeaderText = "Địa chỉ";
+            this.DiscountCode.MinimumWidth = 6;
+            this.DiscountCode.Name = "DiscountCode";
+            this.DiscountCode.ReadOnly = true;
+            // 
+            // tongtien
+            // 
+            this.tongtien.DataPropertyName = "TotalMoney";
+            this.tongtien.HeaderText = "Tổng tiền đã mua";
+            this.tongtien.MinimumWidth = 6;
+            this.tongtien.Name = "tongtien";
+            this.tongtien.ReadOnly = true;
             // 
             // pictureBox4
             // 
@@ -385,62 +445,7 @@
             this.textBoxTimSoDienThoai.Name = "textBoxTimSoDienThoai";
             this.textBoxTimSoDienThoai.Size = new System.Drawing.Size(399, 43);
             this.textBoxTimSoDienThoai.TabIndex = 187;
-            // 
-            // MaSP
-            // 
-            this.MaSP.DataPropertyName = "Customers_ID";
-            this.MaSP.HeaderText = "Mã khách hàng";
-            this.MaSP.MinimumWidth = 6;
-            this.MaSP.Name = "MaSP";
-            this.MaSP.ReadOnly = true;
-            // 
-            // TenSanPham
-            // 
-            this.TenSanPham.DataPropertyName = "PhoneNumber";
-            this.TenSanPham.HeaderText = "Số điện thoại";
-            this.TenSanPham.MinimumWidth = 6;
-            this.TenSanPham.Name = "TenSanPham";
-            this.TenSanPham.ReadOnly = true;
-            // 
-            // GiaBan
-            // 
-            this.GiaBan.DataPropertyName = "NameCustomer";
-            this.GiaBan.HeaderText = "Tên khách hàng";
-            this.GiaBan.MinimumWidth = 6;
-            this.GiaBan.Name = "GiaBan";
-            this.GiaBan.ReadOnly = true;
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "Birthday";
-            this.SoLuong.HeaderText = "Ngày sinh";
-            this.SoLuong.MinimumWidth = 6;
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            // 
-            // TotalMoney
-            // 
-            this.TotalMoney.DataPropertyName = "Gender";
-            this.TotalMoney.HeaderText = "Giới tính";
-            this.TotalMoney.MinimumWidth = 6;
-            this.TotalMoney.Name = "TotalMoney";
-            this.TotalMoney.ReadOnly = true;
-            // 
-            // DiscountCode
-            // 
-            this.DiscountCode.DataPropertyName = "AddressCustomer";
-            this.DiscountCode.HeaderText = "Địa chỉ";
-            this.DiscountCode.MinimumWidth = 6;
-            this.DiscountCode.Name = "DiscountCode";
-            this.DiscountCode.ReadOnly = true;
-            // 
-            // tongtien
-            // 
-            this.tongtien.DataPropertyName = "TotalMoney";
-            this.tongtien.HeaderText = "Tổng tiền đã mua";
-            this.tongtien.MinimumWidth = 6;
-            this.tongtien.Name = "tongtien";
-            this.tongtien.ReadOnly = true;
+            this.textBoxTimSoDienThoai.TextChanged += new System.EventHandler(this.textBoxTimSoDienThoai_TextChanged);
             // 
             // label7
             // 
@@ -501,6 +506,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
