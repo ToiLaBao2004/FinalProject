@@ -13,11 +13,6 @@ namespace DataAccessLayer.Context
     {
         public DataContext() : base("name=FinalProject")
         {
-            if (!Database.Exists("DoAnLapTrinhWinformsCodeFirst"))
-            {
-                //  Thiết lập chế độ khởi tạo để tự động di chuyển CSDL lên phiên bản mới nhất
-                Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataContext, Configuration>());
-            }
         }
 
         public virtual DbSet<Brand> Brands { get; set; }

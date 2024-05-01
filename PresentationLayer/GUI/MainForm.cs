@@ -6,6 +6,8 @@ namespace PresentationLayer.GUI
     public partial class MainForm : Form
     {
         FormSanPham formSanPham = new FormSanPham();
+        FormHoaDonBanHang formHoaDonBanHang = new FormHoaDonBanHang();
+        FormKhachHang formKhachHang = new FormKhachHang();
         public MainForm(string name, string chucVu)
         {
             InitializeComponent();
@@ -19,11 +21,19 @@ namespace PresentationLayer.GUI
         {
             formSanPham.TopLevel = false;
             panel.Controls.Add(formSanPham);
+
+            formHoaDonBanHang.TopLevel = false;
+            panel.Controls.Add(formHoaDonBanHang);
+
+            formKhachHang.TopLevel = false;
+            panel.Controls.Add(formKhachHang);
         }
 
         void turnOfAllForm()
         {
             formSanPham.Hide();
+            formHoaDonBanHang.Hide();
+            formKhachHang.Hide();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -63,6 +73,30 @@ namespace PresentationLayer.GUI
         {
             turnOfAllForm();
             formSanPham.Show();
+        }
+
+        private void buttonHoaDon_Click(object sender, System.EventArgs e)
+        {
+            turnOfAllForm();
+            formHoaDonBanHang.Show();
+        }
+
+        private void pictureBox4_Click(object sender, System.EventArgs e)
+        {
+            turnOfAllForm();
+            formHoaDonBanHang.Show();
+        }
+
+        private void buttonKhachHang_Click(object sender, System.EventArgs e)
+        {
+            turnOfAllForm();
+            formKhachHang.Show();
+        }
+
+        private void pictureBox5_Click(object sender, System.EventArgs e)
+        {
+            turnOfAllForm();
+            formKhachHang.Show();
         }
     }
 }

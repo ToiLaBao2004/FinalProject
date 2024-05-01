@@ -105,11 +105,11 @@
             //  Thêm dữ liệu mẫu (seed data) vào bảng Products
             var products = new[]
             {
-                new Product { Product_ID = "88D2018", ProductName = "Yonex Astrox 88D 2018", UnitPrice = 6500000, Quantity = 0, Brand_ID = "YNX", Category_ID = "VCL", Picture_ID = 20 },
+                new Product { Product_ID = "88D2018", ProductName = "Yonex Astrox 88D 2018", UnitPrice = 6500000, Quantity = 10, Brand_ID = "YNX", Category_ID = "VCL", Picture_ID = 20 },
                 new Product { Product_ID = "88DP2022", ProductName = "Yonex Astrox 88D Pro 2022", UnitPrice = 4900000, Quantity = 0, Brand_ID = "YNX", Category_ID = "VCL", Picture_ID = 21 },
                 new Product { Product_ID = "88DS2022", ProductName = "Yonex Astrox 88S Pro 2022", UnitPrice = 4800000, Quantity = 0, Brand_ID = "YNX", Category_ID = "VCL", Picture_ID = 23 },
                 new Product { Product_ID = "88S2018", ProductName = "Yonex Astrox 88S 2018", UnitPrice = 6400000, Quantity = 0, Brand_ID = "YNX", Category_ID = "VCL", Picture_ID = 22 },
-                new Product { Product_ID = "99NAVY2020", ProductName = "Yonex Astrox 99 Navy 2020", UnitPrice = 5000000, Quantity = 0, Brand_ID = "YNX", Category_ID = "VCL", Picture_ID = 24 },
+                new Product { Product_ID = "99NAVY2020", ProductName = "Yonex Astrox 99 Navy 2020", UnitPrice = 5000000, Quantity = 10, Brand_ID = "YNX", Category_ID = "VCL", Picture_ID = 24 },
                 new Product { Product_ID = "99PRO2022", ProductName = "Yonex Astrox 99 Pro 2022", UnitPrice = 5500000, Quantity = 0, Brand_ID = "YNX", Category_ID = "VCL", Picture_ID = 25 },
                 new Product { Product_ID = "ACLYĐL", ProductName = "Áo cầu lông Yonex Đen Size L", UnitPrice = 200000, Quantity = 0, Brand_ID = "YNX", Category_ID = "ACL", Picture_ID = 1 },
                 new Product { Product_ID = "ACLYĐM", ProductName = "Áo cầu lông Yonex Đen Size M", UnitPrice = 200000, Quantity = 0, Brand_ID = "YNX", Category_ID = "ACL", Picture_ID = 1 },
@@ -119,7 +119,7 @@
                 new Product { Product_ID = "ACLYTL", ProductName = "Áo cầu lông Yonex Trắng Size L", UnitPrice = 200000, Quantity = 0, Brand_ID = "YNX", Category_ID = "ACL", Picture_ID = 2 },
                 new Product { Product_ID = "ACLYTM", ProductName = "Áo cầu lông Yonex Trắng Size M", UnitPrice = 200000, Quantity = 0, Brand_ID = "YNX", Category_ID = "ACL", Picture_ID = 2 },
                 new Product { Product_ID = "ACLYTS", ProductName = "Áo cầu lông Yonex Trắng Size S", UnitPrice = 200000, Quantity = 0, Brand_ID = "YNX", Category_ID = "ACL", Picture_ID = 2 },
-                new Product { Product_ID = "ACLYTXL", ProductName = "Áo cầu lông Yonex Trắng Size XL", UnitPrice = 200000, Quantity = 0, Brand_ID = "YNX", Category_ID = "ACL", Picture_ID = 2 },
+                new Product { Product_ID = "ACLYTXL", ProductName = "Áo cầu lông Yonex Trắng Size XL", UnitPrice = 200000, Quantity = 10, Brand_ID = "YNX", Category_ID = "ACL", Picture_ID = 2 },
                 new Product { Product_ID = "ACLYTXXL", ProductName = "Áo cầu lông Yonex Trắng Size XXL", UnitPrice = 200000, Quantity = 0, Brand_ID = "YNX", Category_ID = "ACL", Picture_ID = 2 },
                 new Product { Product_ID = "ANKLĐL", ProductName = "Áo bóng đá Nike không logo Đen Size L", UnitPrice = 150000, Quantity = 0, Brand_ID = "NIK", Category_ID = "BĐBĐ", Picture_ID = 30 },
                 new Product { Product_ID = "ANKLĐM", ProductName = "Áo bóng đá Nike không logo Đen Size M", UnitPrice = 150000, Quantity = 0, Brand_ID = "NIK", Category_ID = "BĐBĐ", Picture_ID = 30 },
@@ -232,6 +232,55 @@
                 PhoneNumber = "0363609039", RoleEmployee = "Người tạo ra phần mềm này", Active = "1",
                 PassWordAccount = "baodeptrai" };
             context.Employees.AddOrUpdate(admin);
+
+            var suppliers = new[]
+            {
+                new Supplier { Supplier_ID = "ATS", CompanyName = "Anh Thắng Sport", PhoneNumber = "0981122234", AddressSupplier = "41 Đường C1, P13, Q. Tân Bình, TP Hồ Chí Minh", Email = "anhthangsport.com" },
+                new Supplier { Supplier_ID = "VNB", CompanyName = "Vietnam Badminton", PhoneNumber = "0977508430", AddressSupplier = "20 Cao Bá Nhạ, Phường Nguyễn Cư Trinh, Quận 1, TPHCM", Email = "info@shopvnb.com" },
+                new Supplier { Supplier_ID = "YNS", CompanyName = "Yonex Sunrise Vietnam", PhoneNumber = "0363609038", AddressSupplier = "157 Điện Biên Phủ, Phường Đa Kao, Quận 1, Thành Phố Hồ Chí Minh, Việt Nam", Email = "sunrisevn@risesun.com.sg" }
+            };
+            context.Suppliers.AddOrUpdate(suppliers);
+
+            var discounts = new[]
+            {
+                new Discount {DiscountCode = "14THANG2", PercentageDiscount = 15, StartDay = new DateTime(2024, 02, 10), EndDay = new DateTime(2024, 02, 15) },
+                new Discount {DiscountCode = "30THANG4", PercentageDiscount = 25, StartDay = new DateTime(2024, 04, 25), EndDay = new DateTime(2024, 05, 03) },
+                new Discount {DiscountCode = "8THANG3", PercentageDiscount = 20, StartDay = new DateTime(2024, 03, 05), EndDay = new DateTime(2024, 03, 10) }
+            };
+            context.Discounts.AddOrUpdate(discounts);
+
+            var customers = new[]
+            {
+                new Customer { Customers_ID = "KH00001", PhoneNumber = "0901236767", NameCustomer = "Trần Đức Anh", Gender = "Nam", TotalMoney = 4050000 }
+            };
+            context.Customers.AddOrUpdate(customers);
+
+            var imports = new[]
+            {
+                new Import { Import_ID = "NH00001", Supplier_ID = "VNB", ImportDay = new DateTime(2004, 02, 17), TotalMoney = 106000000 }
+            };
+            context.Imports.AddOrUpdate(imports);
+
+            var importDetails = new[]
+            {
+                new ImportDetail { Import_ID = "NH00001", Product_ID = "88D2018", Quantity = 10, Unitcost = 6000000, TotalOfProduct = 60000000 },
+                new ImportDetail { Import_ID = "NH00001", Product_ID = "99NAVY2020", Quantity = 10, Unitcost = 4500000, TotalOfProduct = 45000000 },
+                new ImportDetail { Import_ID = "NH00001", Product_ID = "ACLYTXL", Quantity = 10, Unitcost = 100000, TotalOfProduct = 1000000 }
+            };
+            context.ImportDetails.AddOrUpdate(importDetails);
+
+            var orders = new[]
+            {
+                new Order { Order_ID = "HD00001", Customers_ID = "KH00001", Employee_ID = "Admin", OrderDate = new DateTime(2024, 04, 30), TotalMoney = 4050000, DiscountCode = "30THANG4" }
+            };
+            context.Orders.AddOrUpdate(orders);
+
+            var orderDetails = new[]
+            {
+                new OrderDetail { Order_ID = "HD00001", Product_ID = "99NAVY2020", Quantity = 1 },
+                new OrderDetail { Order_ID = "HD00001", Product_ID = "ACLYTXL", Quantity = 2 }
+            };
+            context.OrderDetails.AddOrUpdate(orderDetails);
 
             context.SaveChanges();
         }
