@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoadDataFunc\DataBienLai.cs" />
     <Compile Include="LoadDataFunc\DataHinhAnhSP.cs" />
     <Compile Include="LoadDataFunc\DataHoaDon.cs" />
     <Compile Include="LoadDataFunc\DataKhachHang.cs" />

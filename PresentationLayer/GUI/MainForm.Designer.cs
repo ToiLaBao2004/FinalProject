@@ -184,6 +184,7 @@
             this.buttonHoaDonNhap.Text = "Hóa đơn nhập hàng";
             this.buttonHoaDonNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonHoaDonNhap.UseVisualStyleBackColor = false;
+            this.buttonHoaDonNhap.Click += new System.EventHandler(this.buttonHoaDonNhap_Click);
             // 
             // buttonNhaCungCap
             // 
@@ -210,6 +211,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 18;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // pictureBox8
             // 
@@ -243,6 +245,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 15;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox5
             // 
@@ -286,7 +289,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(83, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(171, 161);
+            this.pictureBox2.Size = new System.Drawing.Size(161, 161);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;

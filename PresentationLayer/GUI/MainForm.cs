@@ -8,6 +8,7 @@ namespace PresentationLayer.GUI
         FormSanPham formSanPham = new FormSanPham();
         FormHoaDonBanHang formHoaDonBanHang = new FormHoaDonBanHang();
         FormKhachHang formKhachHang = new FormKhachHang();
+        FormBienLai formBienLai = new FormBienLai();
         public MainForm(string name, string chucVu)
         {
             InitializeComponent();
@@ -27,6 +28,9 @@ namespace PresentationLayer.GUI
 
             formKhachHang.TopLevel = false;
             panel.Controls.Add(formKhachHang);
+
+            formBienLai.TopLevel = false;
+            panel.Controls.Add(formBienLai);
         }
 
         void turnOfAllForm()
@@ -34,6 +38,7 @@ namespace PresentationLayer.GUI
             formSanPham.Hide();
             formHoaDonBanHang.Hide();
             formKhachHang.Hide();
+            formBienLai.Hide();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -97,6 +102,28 @@ namespace PresentationLayer.GUI
         {
             turnOfAllForm();
             formKhachHang.Show();
+        }
+
+        private void pictureBox9_Click(object sender, System.EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Restart();
+            }
+        }
+
+        private void buttonHoaDonNhap_Click(object sender, System.EventArgs e)
+        {
+            turnOfAllForm();
+            formBienLai.Show();
+        }
+
+        private void pictureBox6_Click(object sender, System.EventArgs e)
+        {
+            turnOfAllForm();
+            formBienLai.Show();
         }
     }
 }
