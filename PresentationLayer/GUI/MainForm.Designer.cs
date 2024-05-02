@@ -201,6 +201,7 @@
             this.buttonNhaCungCap.Text = "Nhà cung cấp";
             this.buttonNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonNhaCungCap.UseVisualStyleBackColor = false;
+            this.buttonNhaCungCap.Click += new System.EventHandler(this.buttonNhaCungCap_Click);
             // 
             // pictureBox9
             // 
@@ -224,6 +225,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 17;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // pictureBox7
             // 

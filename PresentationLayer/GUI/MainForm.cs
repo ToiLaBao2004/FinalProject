@@ -10,6 +10,7 @@ namespace PresentationLayer.GUI
         FormKhachHang formKhachHang = new FormKhachHang();
         FormBienLai formBienLai = new FormBienLai();
         FormNhanVien formNhanVien = new FormNhanVien();
+        FormNhaCungCap formNhaCungCap = new FormNhaCungCap();
         public MainForm(string name, string chucVu)
         {
             InitializeComponent();
@@ -35,6 +36,9 @@ namespace PresentationLayer.GUI
 
             formNhanVien.TopLevel = false;
             panel.Controls.Add(formNhanVien);
+
+            formNhaCungCap.TopLevel = false;
+            panel.Controls.Add(formNhaCungCap);
         }
 
         void turnOfAllForm()
@@ -44,6 +48,7 @@ namespace PresentationLayer.GUI
             formKhachHang.Hide();
             formBienLai.Hide();
             formNhanVien.Hide();
+            formNhaCungCap.Hide();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -141,6 +146,18 @@ namespace PresentationLayer.GUI
         {
             turnOfAllForm();
             formNhanVien.Show();
+        }
+
+        private void buttonNhaCungCap_Click(object sender, System.EventArgs e)
+        {
+            turnOfAllForm();
+            formNhaCungCap.Show();
+        }
+
+        private void pictureBox8_Click(object sender, System.EventArgs e)
+        {
+            turnOfAllForm();
+            formNhaCungCap.Show();
         }
     }
 }
