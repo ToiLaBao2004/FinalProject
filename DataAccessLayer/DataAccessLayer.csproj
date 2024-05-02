@@ -56,6 +56,10 @@
     <Compile Include="Migrations\202404291324129_InitialCreate.designer.cs">
       <DependentUpon>202404291324129_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202405021401547_InitialAlter1.cs" />
+    <Compile Include="Migrations\202405021401547_InitialAlter1.designer.cs">
+      <DependentUpon>202405021401547_InitialAlter1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Category.cs" />
@@ -78,6 +82,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202404291324129_InitialCreate.resx">
       <DependentUpon>202404291324129_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405021401547_InitialAlter1.resx">
+      <DependentUpon>202405021401547_InitialAlter1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

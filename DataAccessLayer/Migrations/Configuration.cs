@@ -227,11 +227,61 @@
             };
             context.Products.AddOrUpdate(p => p.Product_ID, products);
 
-            var admin = new Employee { Employee_ID = "Admin", NameEmployee = "Bảo đẹp trai", 
-                Birthday = new DateTime(2004, 02, 17), Gender = "Nam", AddressEmployee = "Lâm Đồng", 
-                PhoneNumber = "0363609039", RoleEmployee = "Người tạo ra phần mềm này", Active = "1",
-                PassWordAccount = "baodeptrai" };
+            var admin = new Employee
+            {
+                Employee_ID = "Admin",
+                NameEmployee = "Bảo đẹp trai",
+                Birthday = new DateTime(2004, 02, 17),
+                Gender = "Nam",
+                AddressEmployee = "Lâm Đồng",
+                PhoneNumber = "0363609039",
+                RoleEmployee = "Người tạo ra phần mềm này",
+                Active = "1",
+                PassWordAccount = "baodeptrai"
+            };
             context.Employees.AddOrUpdate(admin);
+
+            var quanLy01 = new Employee
+            {
+                Employee_ID = "QL01",
+                NameEmployee = "Lê Thanh Phong",
+                Birthday = new DateTime(2004, 03, 09),
+                Gender = "Nam",
+                AddressEmployee = "Long An",
+                PhoneNumber = "0815474739",
+                RoleEmployee = "Quản lý",
+                Active = "1",
+                PassWordAccount = "baodeptrai"
+            };
+            context.Employees.AddOrUpdate(quanLy01);
+
+            var banHang01 = new Employee
+            {
+                Employee_ID = "BH01",
+                NameEmployee = "Võ Thị Mỹ Lợi",
+                Birthday = new DateTime(2004, 04, 08),
+                Gender = "Nữ",
+                AddressEmployee = "Bình Định",
+                PhoneNumber = "0372260578",
+                RoleEmployee = "Bán hàng",
+                Active = "1",
+                PassWordAccount = "baodeptrai"
+            };
+            context.Employees.AddOrUpdate(banHang01);
+
+            var banHang02 = new Employee
+            {
+                Employee_ID = "BH02",
+                NameEmployee = "Lương Bảo Long",
+                Birthday = new DateTime(2011, 02, 01),
+                Gender = "Nam",
+                AddressEmployee = "TP.HCM",
+                PhoneNumber = "0938430411",
+                RoleEmployee = "Bán hàng",
+                Active = "1",
+                PassWordAccount = "baodeptrai"
+            };
+            context.Employees.AddOrUpdate(banHang02);
 
             var suppliers = new[]
             {

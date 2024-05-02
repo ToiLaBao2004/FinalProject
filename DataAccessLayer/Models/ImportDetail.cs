@@ -24,7 +24,6 @@ namespace DataAccessLayer.Models
 
         public int Unitcost { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public int? TotalOfProduct { get; set; }
 
         public virtual Import Import { get; set; }

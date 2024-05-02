@@ -59,7 +59,7 @@ namespace DataAccessLayer.Context
             modelBuilder.Entity<Customer>()
                 .Property(e => e.Gender)
                 .IsFixedLength()
-                .IsUnicode(false);
+                .IsUnicode(true);
 
             modelBuilder.Entity<Customer>()
                 .HasMany(e => e.Orders)
@@ -77,7 +77,7 @@ namespace DataAccessLayer.Context
             modelBuilder.Entity<Employee>()
                 .Property(e => e.Gender)
                 .IsFixedLength()
-                .IsUnicode(false);
+                .IsUnicode(true);
 
             modelBuilder.Entity<Employee>()
                 .Property(e => e.PhoneNumber)

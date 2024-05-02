@@ -60,7 +60,7 @@ namespace PresentationLayer.DetailForm
 
         private Image GetImageByName(string imageName)
         {
-            string imgFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "C:\\HCMUTE\\FinalProject\\PresentationLayer\\Image");
+            string imgFolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../PresentationLayer/Image");
             try
             {
                 // Đường dẫn đến tệp tin ảnh bằng tên hình ảnh
