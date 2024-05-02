@@ -206,7 +206,7 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.MidnightBlue;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(2, 718);
+            this.pictureBox9.Location = new System.Drawing.Point(2, 715);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(55, 47);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -22,7 +22,7 @@ namespace PresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm("Nguyễn Hoài Bảo","Đẹp trai"));
+            Application.Run(new LoginForm());
         }
     }
 }
