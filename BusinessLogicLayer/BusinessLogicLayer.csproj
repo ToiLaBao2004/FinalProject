@@ -58,6 +58,7 @@
     <Compile Include="LoadDataFunc\DataHinhAnhSP.cs" />
     <Compile Include="LoadDataFunc\DataHoaDon.cs" />
     <Compile Include="LoadDataFunc\DataKhachHang.cs" />
+    <Compile Include="LoadDataFunc\DataNhanVien.cs" />
     <Compile Include="LoadDataFunc\DataPhanLoaiSP.cs" />
     <Compile Include="LoadDataFunc\DataSanPham.cs" />
     <Compile Include="LoadDataFunc\DataThuongHieu.cs" />

@@ -244,9 +244,9 @@
             this.label3.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.Location = new System.Drawing.Point(521, 224);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 21);
+            this.label3.Size = new System.Drawing.Size(125, 21);
             this.label3.TabIndex = 107;
-            this.label3.Text = "Tên sản phẩm";
+            this.label3.Text = "Mã sản phẩm";
             // 
             // textBoxSanPham
             // 

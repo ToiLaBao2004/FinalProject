@@ -169,6 +169,7 @@
             this.buttonNhanVien.Text = "Nhân viên";
             this.buttonNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonNhanVien.UseVisualStyleBackColor = false;
+            this.buttonNhanVien.Click += new System.EventHandler(this.buttonNhanVien_Click);
             // 
             // buttonHoaDonNhap
             // 
@@ -234,6 +235,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 16;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // pictureBox6
             // 

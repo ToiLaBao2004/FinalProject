@@ -9,6 +9,7 @@ namespace PresentationLayer.GUI
         FormHoaDonBanHang formHoaDonBanHang = new FormHoaDonBanHang();
         FormKhachHang formKhachHang = new FormKhachHang();
         FormBienLai formBienLai = new FormBienLai();
+        FormNhanVien formNhanVien = new FormNhanVien();
         public MainForm(string name, string chucVu)
         {
             InitializeComponent();
@@ -31,6 +32,9 @@ namespace PresentationLayer.GUI
 
             formBienLai.TopLevel = false;
             panel.Controls.Add(formBienLai);
+
+            formNhanVien.TopLevel = false;
+            panel.Controls.Add(formNhanVien);
         }
 
         void turnOfAllForm()
@@ -39,6 +43,7 @@ namespace PresentationLayer.GUI
             formHoaDonBanHang.Hide();
             formKhachHang.Hide();
             formBienLai.Hide();
+            formNhanVien.Hide();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -124,6 +129,18 @@ namespace PresentationLayer.GUI
         {
             turnOfAllForm();
             formBienLai.Show();
+        }
+
+        private void buttonNhanVien_Click(object sender, System.EventArgs e)
+        {
+            turnOfAllForm();
+            formNhanVien.Show();
+        }
+
+        private void pictureBox7_Click(object sender, System.EventArgs e)
+        {
+            turnOfAllForm();
+            formNhanVien.Show();
         }
     }
 }
